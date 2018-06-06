@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { PagesComponent } from './componentes/pages.component';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './componentes/home/home.component';
@@ -14,36 +15,40 @@ import { ContactenosComponent } from './componentes/contactenos/contactenos.comp
 import { LoginComponent } from './componentes/login/login.component';
 
 
+
 const appRoutes : Routes = [
   {
     path: "",
-    component: LoginComponent
+    component: PagesComponent,
+    children: [
+      {
+        path:"contactenos",
+        component: ContactenosComponent
+      },
+      {
+        path:"destinos",
+        component: DestinosComponent
+      },
+      {
+        path:"alojamientos",
+        component: AlojamientosComponent
+      },
+      {
+        path:"restaurantes",
+        component: RestaurantsComponent
+      },
+      {
+        path:"home",
+        component: HomeComponent
+      }
+    ]
   },
   {
     path: "login",
     component: LoginComponent
   },
   
-  {
-    path:"contactenos",
-    component: ContactenosComponent
-  },
-  {
-    path:"destinos",
-    component: DestinosComponent
-  },
-  {
-    path:"alojamientos",
-    component: AlojamientosComponent
-  },
-  {
-    path:"restaurantes",
-    component: RestaurantsComponent
-  },
-  {
-    path:"home",
-    component: HomeComponent
-  },
+  
 ];
 
 
@@ -57,7 +62,8 @@ const appRoutes : Routes = [
     AlojamientosComponent,
     RestaurantsComponent,
     ContactenosComponent,
-    LoginComponent
+    LoginComponent,
+    PagesComponent
   ],
   imports: [
     BrowserModule,
