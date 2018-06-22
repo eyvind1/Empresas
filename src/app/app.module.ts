@@ -15,7 +15,10 @@ import { ContactenosComponent } from './componentes/contactenos/contactenos.comp
 import { LoginComponent } from './componentes/login/login.component';
 import { ViajeComponent } from './componentes/viaje/viaje.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+<<<<<<< HEAD
 import {ServiceModule} from './servicios/service.module';
+=======
+>>>>>>> e4a44ef96ab4ba39727bf639d8daffcacdda205c
 
 
 import 'hammerjs';
@@ -82,8 +85,12 @@ const appRoutes : Routes = [
     RouterModule.forRoot(appRoutes),
     MaterialModule,
     FormsModule,
+<<<<<<< HEAD
     ReactiveFormsModule,
     ServiceModule
+=======
+    ReactiveFormsModule
+>>>>>>> e4a44ef96ab4ba39727bf639d8daffcacdda205c
   ],
   providers: [],
   bootstrap: [AppComponent]
