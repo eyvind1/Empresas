@@ -13,6 +13,13 @@ import { AlojamientosComponent } from './componentes/alojamientos/alojamientos.c
 import { RestaurantsComponent } from './componentes/restaurants/restaurants.component';
 import { ContactenosComponent } from './componentes/contactenos/contactenos.component';
 import { LoginComponent } from './componentes/login/login.component';
+import { ViajeComponent } from './componentes/viaje/viaje.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import {ServiceModule} from './servicios/service.module';
+
+
+import 'hammerjs';
+import { MaterialModule } from './material/material.module';
 
 
 
@@ -40,6 +47,10 @@ const appRoutes : Routes = [
       {
         path:"home",
         component: HomeComponent
+      },
+      {
+        path:"viaje",
+        component: ViajeComponent
       }
     ]
   },
@@ -63,11 +74,16 @@ const appRoutes : Routes = [
     RestaurantsComponent,
     ContactenosComponent,
     LoginComponent,
-    PagesComponent
+    PagesComponent,
+    ViajeComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
+    MaterialModule,
+    FormsModule,
+    ReactiveFormsModule,
+    ServiceModule
   ],
   providers: [],
   bootstrap: [AppComponent]

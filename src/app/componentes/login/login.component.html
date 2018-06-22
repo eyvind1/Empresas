@@ -1,18 +1,20 @@
 <p class="tip">Sonder Login</p>
 <div class="cont">
   <div class="form sign-in">
+    <form [formGroup]="formaLogin" (ngSubmit)="logearUsuario()">
     <h2>Bienvenido de Nuevo,</h2>
     <label>
       <span>Email</span>
-      <input type="email" />
+      <input formControlName= 'email' type="email" />
     </label>
     <label>
       <span>Password</span>
-      <input type="password" />
+      <input formControlName= 'password' type="password" />
     </label>
     <p class="forgot-pass">Olvido su contraseña?</p>
-    <button type="button" class="submit">Ingresar</button>
+    <button type="submit" class="submit">Ingresar</button>
     <button type="button" class="fb-btn">Conectar con <span>facebook</span></button>
+  </form>
   </div>
   <div class="sub-cont">
     <div class="img">
@@ -55,5 +57,4 @@
 <a href="https://twitter.com/NikolayTalanov" target="_blank" class="icon-link icon-link--twitter">
   <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-128.png">
 </a>
-
 

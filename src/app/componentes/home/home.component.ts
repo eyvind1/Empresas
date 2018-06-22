@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsuarioService } from '../../servicios/service.index';
 
 @Component({
   selector: 'app-home',
@@ -9,10 +10,14 @@ export class HomeComponent implements OnInit {
 
   nombre : string;
 
-  constructor() { }
+  constructor(private usuarioService: UsuarioService) { }
 
   ngOnInit() {
     this.nombre = "chepo";
   }
+  Salir (){
+    console.log("saliendo");
+    this.usuarioService.logOut(); 
+   }
 
 }
