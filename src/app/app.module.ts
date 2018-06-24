@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -15,6 +16,7 @@ import { ContactenosComponent } from './componentes/contactenos/contactenos.comp
 import { LoginComponent } from './componentes/login/login.component';
 import { ViajeComponent } from './componentes/viaje/viaje.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { SliderModule } from 'angular-image-slider';
 
 
 import 'hammerjs';
@@ -81,7 +83,8 @@ const appRoutes : Routes = [
     RouterModule.forRoot(appRoutes),
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

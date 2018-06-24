@@ -13,7 +13,7 @@
 				<div class="menu_search_form_container">
 					<form action="#" id="menu_search_form">
 						<input type="search" class="menu_search_input menu_mm">
-						<button id="menu_search_submit" class="menu_search_submit" type="submit"><img src="images/search_2.png" alt=""></button>
+						<button id="menu_search_submit" class="menu_search_submit" type="submit"><img src="../../../assets/images/search_2.png" alt=""></button>
 					</form>
 				</div>
 				<ul class="menu_list menu_mm">
@@ -108,7 +108,12 @@
 							</div> 
 
 							<br/><br/><br/>
-							<div class="item_image"><img src="../../../assets/images/hotel1.jpg" alt=""></div>
+							<div class="item_image"><img src="../../../assets/images/hotel1.jpg" alt="">
+								<mat-card-actions>
+										<button mat-button>LIKE</button>
+										<button mat-button>SHARE</button>
+									</mat-card-actions>
+							</div>
 							<div class="item_content">
 								<div class="item_price">Desde $20</div>
 								<div class="item_title">Cañete, Lima</div>
@@ -131,7 +136,12 @@
 
 						<!-- Item -->
 						<div class="item clearfix rating_3">
-							<div class="item_image"><img src="../../../assets/images/hotel2.jpg" alt=""></div>
+							<div class="item_image"><img src="../../../assets/images/hotel2.jpg" alt="">
+								<mat-card-actions>
+										<button mat-button>LIKE</button>
+										<button mat-button>SHARE</button>
+									</mat-card-actions>
+							</div>
 							<div class="item_content">
 								<div class="item_price">Desde $15</div>
 								<div class="item_title"> Hotel Dayana</div>
@@ -154,7 +164,12 @@
 
 						<!-- Item -->
 						<div class="item clearfix rating_4">
-							<div class="item_image"><img src="../../../assets/images/hotel3.jpg" alt=""></div>
+							<div class="item_image"><img src="../../../assets/images/hotel3.jpg" alt="">
+								<mat-card-actions>
+										<button mat-button>LIKE</button>
+										<button mat-button>SHARE</button>
+									</mat-card-actions>
+							</div>
 							<div class="item_content">
 								<div class="item_price">Desde $5</div>
 								<div class="item_title">Restaurant Luz</div>
@@ -174,6 +189,7 @@
 						<!-- Item -->
 						<div class="item clearfix rating_5">
 							<div class="item_image"><img src="../../../assets/images/hotel4.jpg" alt=""></div>
+							
 							<div class="item_content">
 								<div class="item_price">Desde $4</div>
 								<div class="item_title">Cevicheria El Mal Manda</div>
@@ -192,11 +208,12 @@
 								<div class="item_more_link"><a href="#">Ver Mas</a></div>
 							</div>
 						</div>
-
+				
+						
+						
+							<br><br>
               <!-- Stepper -->
-              <button mat-raised-button (click)="isOptional = !isOptional">
-                {{!isOptional ? 'Enable optional steps' : 'Disable optional steps'}}
-              </button>
+              
               
               <mat-horizontal-stepper [linear]="true" #stepper>
                 <mat-step [stepControl]="firstFormGroup">
@@ -207,17 +224,17 @@
 					</mat-form-field>-->
 					
 						<mat-form-field>
-						  <mat-select formControlName="firstCtrl" placeholder="Favorite food" [(ngModel)]="selectedValue" name="food" required>
+						  <mat-select formControlName="firstCtrl" placeholder="Departamento" [(ngModel)]="selectedValue" name="food" required>
 							<mat-option  *ngFor="let food of foods" [value]="food.value">
 							  {{food.viewValue}}
 							</mat-option>
 						  </mat-select>
 						</mat-form-field>
 					  
-						<p> Selected value: {{selectedValue}} </p>
+						<!--<p> Selected value: {{selectedValue}} </p> -->
 					
                     <div>
-                      <button mat-button matStepperNext>Next</button>
+                      <button mat-button matStepperNext>Siguiente</button>
                     </div>
                   </form>
                 </mat-step>
@@ -225,11 +242,18 @@
                   <form [formGroup]="secondFormGroup">
                     <ng-template matStepLabel>Hotel</ng-template>
                     <mat-form-field>
-                      <input matInput placeholder="Address" formControlName="secondCtrl" required>
-                    </mat-form-field>
+											<!--<input matInput placeholder="Address" formControlName="secondCtrl" required>-->
+											<mat-select formControlName="secondCtrl" placeholder="Hoteles" [(ngModel)]="selectedValue2" name="hotel" required>
+												<mat-option  *ngFor="let hotel of hoteles" [value]="hotel.value">
+													{{hotel.viewValue}}
+												</mat-option>
+												</mat-select>
+										</mat-form-field>
+										<!-- <p> Selected value: {{selectedValue2}} </p>  -->
+
                     <div>
-                      <button mat-button matStepperPrevious>Back</button>
-                      <button mat-button matStepperNext>Next</button>
+                      <button mat-button matStepperPrevious>Atras</button>
+                      <button mat-button matStepperNext>Siguiente</button>
                     </div>
                   </form>
 				</mat-step>
@@ -237,27 +261,52 @@
 					<form [formGroup]="thirdFormGroup">
 					  <ng-template matStepLabel>Restaurant</ng-template>
 					  <mat-form-field>
-						<input matInput placeholder="Address" formControlName="thirdCtrl" required>
+						<!--<input matInput placeholder="Address" formControlName="thirdCtrl" required>-->
+						<mat-select formControlName="thirdCtrl" placeholder="Restaurantes" [(ngModel)]="selectedValue3" name="restaurant" required>
+							<mat-option  *ngFor="let restaurant of restaurantes" [value]="restaurant.value">
+								{{restaurant.viewValue}}
+							</mat-option>
+							</mat-select>
+
 					  </mat-form-field>
 					  <div>
-						<button mat-button matStepperPrevious>Back</button>
-						<button mat-button matStepperNext>Next</button>
+						<button mat-button matStepperPrevious>Atras</button>
+						<button mat-button matStepperNext>Siguiente</button>
 					  </div>
 					</form>
 				  </mat-step>
                 <mat-step>
                   <ng-template matStepLabel>Listo</ng-template>
-                  You are now done.
+                  Eso es Todo por Ahora
                   <div>
-                    <button mat-button matStepperPrevious>Back</button>
-                    <button mat-button (click)="stepper.reset()">Reset</button>
+                    <button mat-button matStepperPrevious>Atras</button>
+                    <button mat-button (click)="stepper.reset()">Corregir</button>
                   </div>
                 </mat-step>
               </mat-horizontal-stepper>
 
  <!---->
- <button mat-button (click)="verificar()">verificar</button>
-
+<br><br>
+ <div class="container">
+	<h2>Su viaje</h2>
+	<p>Usted ha seleccionado las siguientes opciones en su viaje:</p>            
+	<table class="table">
+	  <thead>
+		<tr>
+		  <th>Lugar</th>
+			<th>Hotel</th>
+			<th>Restaurant</th> 
+		</tr>
+	  </thead>
+	  <tbody>
+		<tr>
+		  <td>{{firstFormGroup.value.firstCtrl}}</td>
+		  <td>{{secondFormGroup.value.secondCtrl}}</td>
+		  <td>{{thirdFormGroup.value.thirdCtrl}}</td>
+		</tr>
+	  </tbody>
+	</table>
+  </div>
 
 					</div>
 				</div>
@@ -267,36 +316,7 @@
   
   <br><br>
 
-  <div class="container">
-	<h2>Su viaje</h2>
-	<p>Usted ha seleccionado las siguientes opciones en su viaje:</p>            
-	<table class="table">
-	  <thead>
-		<tr>
-		  <th>Firstname</th>
-		  <th>Lastname</th>
-		  <th>Email</th>
-		</tr>
-	  </thead>
-	  <tbody>
-		<tr>
-		  <td>John</td>
-		  <td>Doe</td>
-		  <td>john@example.com</td>
-		</tr>
-		<tr>
-		  <td>Mary</td>
-		  <td>Moe</td>
-		  <td>mary@example.com</td>
-		</tr>
-		<tr>
-		  <td>July</td>
-		  <td>Dooley</td>
-		  <td>july@example.com</td>
-		</tr>
-	  </tbody>
-	</table>
-  </div>
+  
 
 
   <br><br>
