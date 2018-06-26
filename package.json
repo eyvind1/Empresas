@@ -29,6 +29,7 @@
     "mongoose": "^5.1.4",
     "pg": "^7.4.3",
     "rxjs": "^6.0.0",
+    "sweetalert": "^2.1.0",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {

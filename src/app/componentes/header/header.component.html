@@ -20,16 +20,48 @@
               <li routerLinkActive="active" class="main_nav_item"><a routerLink="/alojamientos">Alojamientos</a></li>
               <li routerLinkActive="active" class="main_nav_item"><a routerLink="/restaurantes">Restaurantes</a></li>
               <li routerLinkActive="active" class="main_nav_item"><a routerLink="/contactenos">Contactenos</a></li>
-              <li class="main_nav_item"><a href=""> <button onclick="Salir()" type="submit" class="search_button ml-auto ctrl_class">Salir</button></a></li>
+              <!--<li class="main_nav_item"><a href=""> <button onclick="Salir()" type="submit" class="search_button ml-auto ctrl_class">Salir</button></a></li>-->
             </ul>
           </nav>
 
+
+
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+          <!-- Add icon library -->
+
+<style>
+.btn {
+    background-color: #fe435b;
+    border: none;
+    color: white;
+    padding: 45px 50px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+    background-color: #eb334a;
+}
+</style>
+
+
+
+
+
+
+
+
           <!-- Search -->
-          <div class="search">
-            <form action="#" class="search_form">
+          <div class="logout">
+          <!--  <form action="#" class="search_form">
               <input type="search" name="search_input" class="search_input ctrl_class" required="required" placeholder="Keyword">
               <button type="submit" class="search_button ml-auto ctrl_class"><img src="../../../assets/images/search.png" alt=""></button>
-            </form>
+            </form>-->
+            <button class="btn" (click)="usuarioService.logOut()"><i class="fa fa-close"></i> Cerrar Sesión</button>
+
           </div>
 
           <!-- Hamburger -->

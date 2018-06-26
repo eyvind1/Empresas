@@ -24,6 +24,7 @@ import {ServiceModule} from './servicios/service.module';
 import 'hammerjs';
 import { MaterialModule } from './material/material.module';
 import { LoginGuardGuard } from './servicios/service.index';
+import { NopagefoundComponent } from './componentes/nopagefound/nopagefound.component';
 
 
 
@@ -57,11 +58,17 @@ const appRoutes : Routes = [
         path:"viaje",
         component: ViajeComponent
       }
+      
     ]
   },
+  
   {
     path: "login",
     component: LoginComponent
+  },
+  {
+    path:"**",
+    component: NopagefoundComponent
   },
   
   
@@ -80,7 +87,8 @@ const appRoutes : Routes = [
     ContactenosComponent,
     LoginComponent,
     PagesComponent,
-    ViajeComponent
+    ViajeComponent,
+    NopagefoundComponent
   ],
   imports: [
     BrowserModule,

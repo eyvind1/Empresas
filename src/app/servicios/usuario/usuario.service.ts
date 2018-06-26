@@ -4,10 +4,10 @@ import { Router } from '@angular/router';
 
 
 
-
 import { map } from "rxjs/operators";
 import { Usuario } from '../../models/usuario.model';
 import { URL_SERVICIOS } from '../../config/config';
+//import { Observable } from 'rxjs';
 
 
 @Injectable({
@@ -25,6 +25,7 @@ export class UsuarioService {
     this.cargarStorage();
     console.log("servicios de usuario listo");
   }
+
 
   estaLogueado() {
     return this.token.length > 5 ? true : false;
@@ -60,7 +61,9 @@ export class UsuarioService {
           // localStorage.setItem('usuario', JSON.stringify(resp.usuario));
           this.guardarStorage(resp.id, resp.token, resp.usuario);
           return true;
-        }));  
+        }))
+        
+        
   }
 
   logOut() {
