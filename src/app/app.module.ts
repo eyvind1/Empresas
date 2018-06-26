@@ -23,8 +23,12 @@ import {ServiceModule} from './servicios/service.module';
 
 import 'hammerjs';
 import { MaterialModule } from './material/material.module';
+<<<<<<< HEAD
 import { LoginGuardGuard } from './servicios/service.index';
 import { NopagefoundComponent } from './componentes/nopagefound/nopagefound.component';
+=======
+import { RegistrarComponent } from './componentes/registrar/registrar.component';
+>>>>>>> c7d1c02509212964d321500ea6899ba998fbfac4
 
 
 
@@ -32,7 +36,6 @@ const appRoutes : Routes = [
   {
     path: "",
     component: PagesComponent,
-    canActivate: [ LoginGuardGuard ],
     children: [
       {
         path:"contactenos",
@@ -88,7 +91,11 @@ const appRoutes : Routes = [
     LoginComponent,
     PagesComponent,
     ViajeComponent,
+<<<<<<< HEAD
     NopagefoundComponent
+=======
+    RegistrarComponent
+>>>>>>> c7d1c02509212964d321500ea6899ba998fbfac4
   ],
   imports: [
     BrowserModule,

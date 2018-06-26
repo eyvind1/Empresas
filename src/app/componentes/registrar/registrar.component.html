@@ -1,0 +1,60 @@
+<p class="tip"></p>
+<div class="cont">
+  <div class="form sign-in">
+    <form [formGroup]="formaLogin" (ngSubmit)="logearUsuario()">
+    <h2>Bienvenido de Nuevo,</h2>
+    <label>
+      <span>Email</span>
+      <input formControlName= 'email' type="email" />
+    </label>
+    <label>
+      <span>Password</span>
+      <input formControlName= 'password' type="password" />
+    </label>
+    <p class="forgot-pass">Olvido su contraseña?</p>
+    <button type="submit" class="submit">Ingresar</button>
+    <button type="button" class="fb-btn">Conectar con <span>facebook</span></button>
+  </form>
+  </div>
+  <div class="sub-cont">
+    <div class="img">
+      <div class="img__text m--up">
+        <h2>Nuevo aquí?</h2>
+        <p>Registrate y descubre un mundo de oportunidades!</p>
+      </div>
+      <div class="img__text m--in">
+        <h2>Uno de nosotros?</h2>
+        <p>Si ya tienes una cuenta, solo ingresa. Nosotros te extrañanamos!</p>
+      </div>
+      <div class="img__btn">
+        <span class="m--up">Registrar </span>
+        <span class="m--in">Ingresar</span>
+      </div>
+    </div>
+    <div class="form sign-up">
+      <h2>Tiempo como para sentirte como en casa,</h2>
+      <label>
+        <span>Name</span>
+        <input type="text" />
+      </label>
+      <label>
+        <span>Email</span>
+        <input type="email" />
+      </label>
+      <label>
+        <span>Password</span>
+        <input type="password" />
+      </label>
+      <button type="button" class="submit">Sign Up</button>
+      <button type="button" class="fb-btn">Join with <span>facebook</span></button>
+    </div>
+  </div>
+</div>
+
+<a href="https://dribbble.com/shots/3306190-Login-Registration-form" target="_blank" class="icon-link">
+  <img src="http://icons.iconarchive.com/icons/uiconstock/socialmedia/256/Dribbble-icon.png">
+</a>
+<a href="https://twitter.com/NikolayTalanov" target="_blank" class="icon-link icon-link--twitter">
+  <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-128.png">
+</a>
+

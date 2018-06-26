@@ -1015,7 +1015,7 @@ section
 .top
 {
 	width: 100%;
-	background: #FFFFFF;
+	background: darkgoldenrod;
 	padding-bottom: 106px;
 }
 .section_title
@@ -1244,7 +1244,7 @@ section
 .popular
 {
 	width: 100%;
-	background: #FFFFFF;
+	background:darkgoldenrod;
 }
 .popular_content
 {

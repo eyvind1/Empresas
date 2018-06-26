@@ -5,8 +5,7 @@ import { HttpClientModule } from "@angular/common/http";
 
 //Los sevicios importados
 import {
-    UsuarioService,
-    LoginGuardGuard
+    UsuarioService
 } from './service.index';
 
 
@@ -20,8 +19,7 @@ import {
         HttpClientModule
     ],
     providers:[
-        UsuarioService,
-        LoginGuardGuard
+        UsuarioService
     ],
     declarations:[]
 })
