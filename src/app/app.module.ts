@@ -23,7 +23,6 @@ import {ServiceModule} from './servicios/service.module';
 
 import 'hammerjs';
 import { MaterialModule } from './material/material.module';
-import { LoginGuardGuard } from './servicios/service.index';
 
 
 
@@ -31,7 +30,6 @@ const appRoutes : Routes = [
   {
     path: "",
     component: PagesComponent,
-    canActivate: [ LoginGuardGuard ],
     children: [
       {
         path:"contactenos",
