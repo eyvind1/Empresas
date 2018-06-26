@@ -23,6 +23,7 @@ import {ServiceModule} from './servicios/service.module';
 
 import 'hammerjs';
 import { MaterialModule } from './material/material.module';
+import { RegistrarComponent } from './componentes/registrar/registrar.component';
 
 
 
@@ -78,7 +79,8 @@ const appRoutes : Routes = [
     ContactenosComponent,
     LoginComponent,
     PagesComponent,
-    ViajeComponent
+    ViajeComponent,
+    RegistrarComponent
   ],
   imports: [
     BrowserModule,
